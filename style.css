@@ -70,7 +70,7 @@ img, video, object {
 }
 
 .logo-img {
-    height: 50px; /* Altura do logo */
+    height: 100px; /* Altura do logo */
     width: auto; /* Largura automática para manter proporção */
     border-radius: 50%; /* Se você quiser um logo circular */
     object-fit: cover; /* Garante que a imagem preencha bem o espaço */
