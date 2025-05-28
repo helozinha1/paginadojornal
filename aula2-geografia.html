@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Mundial IS - Aula 2: Território e Suas Dimensões</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            padding: 32px 28px;
+            flex-grow: 1;
+        }
+        .lesson-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .lesson-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        .lesson-image {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 24px;
+        }
+        .lesson-text {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .lesson-text h2 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .lesson-text h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .lesson-text ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .lesson-text li {
+            margin-bottom: 5px;
+        }
+        .lesson-author {
+            margin-top: 32px;
+            font-size: 0.95rem;
+            color: #888;
+            text-align: right;
+        }
+        /* Estilos do cabeçalho e rodapé, replicados do seu layout principal */
+        .main-header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        .logo h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .main-nav a:hover {
+            color: #a0d9e8;
+        }
+        .main-footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 25px 0;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #a0d9e8;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 20px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-nav li {
+                margin: 10px 0;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .footer-links {
+                margin-top: 15px;
+            }
+            .lesson-title {
+                font-size: 2rem;
+            }
+            .lesson-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./imagens/logo-jornal-mundial-is.png" alt="Logo Jornal Mundial IS" class="logo-img">
+                <h1>Jornal Mundial IS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="geografia.html">Geografia</a></li>
+                    <li><a href="sociologia.html">Sociologia</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="lesson-title">Aula 2: Território e Suas Dimensões</div>
+        <div class="lesson-subtitle">Entendendo o Espaço do Poder e da Identidade</div>
+        <img src="./imagens/aula2-geografia.jpg" alt="Mapa geopolítico, com diferentes cores e fronteiras, simbolizando o território e suas divisões." class="lesson-image">
+        <div class="lesson-text">
+            Em Geografia, o conceito de território é crucial para entender como o espaço é organizado e utilizado. Diferente de um simples espaço físico, o território é definido pela existência de relações de poder e apropriação. É um espaço onde se exerce domínio, seja ele político, econômico, social ou cultural.
+
+            <br><br>
+
+            <h2>A Dimensão Política do Território</h2>
+            A dimensão mais evidente do território é a política. Um país, um estado ou um município são exemplos claros de territórios definidos por fronteiras e governados por leis e instituições específicas. Nesses espaços, o Estado exerce sua soberania, controlando recursos, definindo regras e garantindo a segurança de sua população. As fronteiras não são apenas linhas no mapa; são barreiras que delimitam áreas de jurisdição e controle.
+
+            <h3>Escalas do Território Político:</h3>
+            <ul>
+                <li>Local: Um bairro, uma cidade, onde o poder municipal atua.</li>
+                <li>Regional: Um estado ou uma província, com sua autonomia e legislação específicas.</li>
+                <li>Nacional: O território de um país, onde se manifesta a soberania do Estado-Nação.</li>
+                <li>Internacional/Global: Blocos econômicos, áreas de influência e disputas por territórios que extrapolam as fronteiras nacionais.</li>
+            </ul>
+
+            <h2>A Dimensão Econômica do Território</h2>
+            O território também é fundamental para as relações econômicas. Empresas, corporações e cadeias produtivas organizam o espaço para extrair recursos, produzir bens, distribuir mercadorias e oferecer serviços. O controle de um território pode significar o controle de fontes de matéria-prima, rotas comerciais estratégicas ou mercados consumidores. As desigualdades econômicas entre diferentes áreas geográficas frequentemente refletem as formas de apropriação e uso do território.
+
+            <h3>Exemplos:</h3>
+            <ul>
+                <li>Territórios produtivos: Áreas agrícolas, bacias de mineração, polos industriais.</li>
+                <li>Fluxos econômicos: Rotas de transporte de mercadorias, redes de comunicação.</li>
+                <li>Áreas de investimento: Regiões que atraem capital e indústrias, gerando concentração de riqueza.</li>
+            </ul>
+
+            <h2>A Dimensão Social e Cultural do Território</h2>
+            Além do poder político e econômico, o território é construído e vivido pelas pessoas. Ele adquire significados a partir das relações sociais e culturais que se estabelecem nele. Grupos sociais criam laços de identidade com um território, transformando-o em um lugar com valores, memórias e sentimentos compartilhados. As comunidades ocupam, usam e defendem seus territórios, muitas vezes em lutas por direitos e reconhecimento.
+
+            <h3>Aspectos:</h3>
+            <ul>
+                <li>Territórios de identidade: Comunidades indígenas, quilombolas, bairros com forte senso de pertencimento.</li>
+                <li>Territórios de vivência: Onde as pessoas trabalham, moram, estudam, se divertem, construindo seu cotidiano.</li>
+                <li>Disputas territoriais: Conflitos por terra, moradia, ou controle de áreas por diferentes grupos sociais.</li>
+            </ul>
+
+            <br>
+
+            <h2>Território em Constante Construção</h2>
+            Em suma, o território é um conceito dinâmico. Ele não é apenas uma porção do espaço, mas sim o resultado de contínuas interações de poder, apropriação e significação. Sua análise geográfica nos permite entender as dinâmicas de dominação, resistência, produção e reprodução da vida em diferentes escalas, desde o local até o global.
+        </div>
+
+        <div class="lesson-author">
+          Conteúdo adaptado por Jornal Mundial IS &nbsp;|&nbsp; 27 de maio de 2025
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Jornal Mundial IS. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

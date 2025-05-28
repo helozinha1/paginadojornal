@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Mundial IS - Aula 4: Nação</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            padding: 32px 28px;
+            flex-grow: 1;
+        }
+        .lesson-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .lesson-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        .lesson-image {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 24px;
+        }
+        .lesson-text {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .lesson-text h2 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .lesson-text h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .lesson-text ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .lesson-text li {
+            margin-bottom: 5px;
+        }
+        .lesson-author {
+            margin-top: 32px;
+            font-size: 0.95rem;
+            color: #888;
+            text-align: right;
+        }
+        /* Estilos do cabeçalho e rodapé, replicados do seu layout principal */
+        .main-header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        .logo h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .main-nav a:hover {
+            color: #a0d9e8;
+        }
+        .main-footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 25px 0;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #a0d9e8;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 20px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-nav li {
+                margin: 10px 0;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .footer-links {
+                margin-top: 15px;
+            }
+            .lesson-title {
+                font-size: 2rem;
+            }
+            .lesson-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./imagens/logo-jornal-mundial-is.png" alt="Logo Jornal Mundial IS" class="logo-img">
+                <h1>Jornal Mundial IS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="geografia.html">Geografia</a></li>
+                    <li><a href="sociologia.html">Sociologia</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="lesson-title">Aula 4: O Conceito de Nação em Geografia</div>
+        <div class="lesson-subtitle">Identidade, Cultura e Pertencimento Territorial</div>
+        <img src="./imagens/aula4-geografia.jpg" alt="Pessoas de diferentes etnias e culturas unidas, com símbolos de bandeiras e marcos históricos ao fundo, representando a nação." class="lesson-image">
+        <div class="lesson-text">
+            Em Geografia, o conceito de Nação é fundamental para entender as identidades coletivas e o senso de pertencimento a um determinado grupo humano. Diferente do Estado, que é uma estrutura política e jurídica, a nação é uma construção social e cultural. Ela se refere a um grupo de pessoas unidas por laços históricos, culturais, linguísticos, étnicos ou religiosos, que compartilham um sentimento de identidade e um desejo de viver em comunidade.
+
+            <br><br>
+
+            <h2>Elementos Constitutivos da Nação</h2>
+            Embora não haja uma lista exata e universal, a ideia de nação é geralmente formada por:
+
+            <ul>
+                <li>Cultura Comum: Compartilhamento de tradições, costumes, valores, arte e formas de vida que são transmitidos entre gerações.</li>
+                <li>Língua Comum: A língua é um dos mais fortes elementos de união e distinção de um grupo nacional, facilitando a comunicação e a coesão.</li>
+                <li>História Compartilhada: Um passado comum, com eventos, lutas e memórias que forjam uma narrativa coletiva e um sentimento de pertencimento.</li>
+                <li>Sentimento de Pertencimento: A percepção e o desejo dos indivíduos de fazerem parte de um mesmo grupo nacional, com um destino comum.</li>
+                <li>Território (não exclusivo): Embora a nação não seja definida por fronteiras políticas rígidas como o Estado, ela geralmente tem uma ligação com um espaço geográfico onde sua cultura se desenvolveu ou onde seus membros predominantemente vivem.</li>
+            </ul>
+
+            <br>
+
+            <h2>Nação vs. Estado: Diferenças Fundamentais</h2>
+            É crucial diferenciar Nação de Estado, pois são conceitos distintos, embora frequentemente coexistam:
+
+            <ul>
+                <li>Estado: É a instituição política que exerce soberania sobre um território definido, com um governo e leis. É uma entidade jurídica e administrativa.</li>
+                <li>Nação: É um grupo cultural e social com identidade e laços comuns, que pode ou não ter um território próprio ou um Estado.</li>
+            </ul>
+            Exemplos:
+            <ul>
+                <li>O Brasil é um exemplo de Estado-Nação, onde o Estado brasileiro (instituição) abrange a Nação brasileira (povo com identidade cultural).</li>
+                <li>Os Curdos são um exemplo de Nação sem Estado, pois compartilham cultura e identidade, mas não possuem um território soberano próprio reconhecido internacionalmente.</li>
+                <li>Em países como a Índia, o Estado abrange diversas Nações (diferentes grupos étnicos e linguísticos).</li>
+            </ul>
+
+            <br>
+
+            <h2>Nacionalismo e Suas Expressões Geográficas</h2>
+            O nacionalismo é a ideologia que exalta e defende a identidade e os interesses de uma nação. Pode se manifestar de diversas formas:
+
+            <ul>
+                <li>Nacionalismo Cívico: Baseado na lealdade às instituições do Estado e aos valores democráticos, promovendo a união de diferentes grupos em torno de um projeto político comum (ex: Estados Unidos).</li>
+                <li>Nacionalismo Étnico/Cultural: Focado na pureza cultural, étnica ou religiosa, podendo levar à exclusão ou conflitos com grupos minoritários (ex: movimentos separatistas baseados em etnia).</li>
+            </ul>
+            Geograficamente, o nacionalismo pode impulsionar a formação de novos Estados, a disputa por territórios considerados "ancestrais" ou a criação de políticas de imigração restritivas, influenciando diretamente a configuração do mapa político mundial.
+
+            <br>
+
+            <h2>A Importância da Nação na Geografia Contemporânea</h2>
+            Estudar a nação permite à Geografia entender como as identidades coletivas moldam as fronteiras (físicas e simbólicas), os movimentos populacionais, os conflitos e as cooperações entre os povos. Compreender a complexidade do conceito de nação é essencial para analisar as dinâmicas geopolíticas e os desafios da coexistência em um mundo cada vez mais interconectado.
+        </div>
+
+        <div class="lesson-author">
+          Conteúdo adaptado por Jornal Mundial IS &nbsp;|&nbsp; 27 de maio de 2025
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Jornal Mundial IS. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

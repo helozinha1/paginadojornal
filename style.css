@@ -1,0 +1,470 @@
+/* Importação de fontes do Google Fonts para uma tipografia mais profissional */
+/* Merriweather para títulos, Open Sans para o corpo do texto */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* --- Variáveis CSS --- */
+/* Definindo cores e outros valores para facilitar a manutenção e padronização */
+:root {
+    --primary-color: #004080;        /* Azul escuro: para cabeçalho, botões, títulos principais */
+    --secondary-color: #007bff;      /* Azul vibrante: para hover, tags de categoria, links ativos */
+    --text-color: #333;              /* Cor principal do texto */
+    --light-gray: #f4f4f4;           /* Fundo claro para o corpo */
+    --medium-gray: #eee;            /* Cinza médio: para bordas, separadores */
+    --dark-gray: #555;               /* Cinza escuro: para metadados (data, autor) */
+    --white-color: #fff;             /* Branco: para fundos de cards e texto no cabeçalho */
+    --box-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.07); /* Sombra suave para elementos */
+    --box-shadow-medium: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra um pouco mais pronunciada */
+}
+
+/* --- Estilos Globais e Reset Básico --- */
+body {
+    font-family: 'Open Sans', Arial, sans-serif; /* Fonte principal para o corpo */
+    margin: 0; /* Remove margens padrão do navegador */
+    background-color: var(--light-gray); /* Fundo suave para a página */
+    color: var(--text-color); /* Cor padrão do texto */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    scroll-behavior: smooth; /* Rolagem suave ao clicar em links de âncora */
+    -webkit-font-smoothing: antialiased; /* Suavização de fontes para WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Suavização de fontes para Firefox */
+}
+
+/* Garante que imagens, vídeos e objetos responsivos se ajustem */
+img, video, object {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo de imagens em linha */
+}
+
+/* Reset básico para caixas */
+*, *::before, *::after {
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+}
+
+/* Container para centralizar o conteúdo e limitar a largura */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 20px; /* Espaçamento lateral para evitar que o conteúdo grude nas bordas */
+}
+
+/* --- Cabeçalho Principal (Header) --- */
+.main-header {
+    background-color: var(--primary-color); /* Cor de fundo do cabeçalho */
+    color: var(--white-color); /* Cor do texto no cabeçalho */
+    padding: 1rem 0; /* Preenchimento superior e inferior */
+    box-shadow: var(--box-shadow-medium); /* Sombra para dar profundidade */
+}
+
+.header-content {
+    display: flex; /* Permite layout flexível dos elementos internos */
+    justify-content: space-between; /* Espaça logo e navegação */
+    align-items: center; /* Alinha verticalmente no centro */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    gap: 20px; /* Espaçamento entre os itens flexíveis */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre a imagem do logo e o texto */
+}
+
+.logo-img {
+    height: 50px; /* Altura do logo */
+    width: auto; /* Largura automática para manter proporção */
+    border-radius: 50%; /* Se você quiser um logo circular */
+    object-fit: cover; /* Garante que a imagem preencha bem o espaço */
+}
+
+.logo h1 {
+    font-family: 'Merriweather', serif; /* Fonte para o título do jornal */
+    font-size: 2.2rem; /* Tamanho da fonte do título */
+    margin: 0; /* Remove margens padrão do h1 */
+    color: var(--white-color);
+}
+
+/* --- Navegação Principal (Nav) --- */
+.main-nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove preenchimento padrão da lista */
+    margin: 0; /* Remove margens padrão da lista */
+    display: flex; /* Layout flexível para os itens de navegação */
+    flex-wrap: wrap; /* Permite que os links quebrem a linha */
+    justify-content: center; /* Centraliza os links no cabeçalho em telas menores */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.main-nav ul li a {
+    color: var(--white-color); /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: 600; /* Peso da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    padding: 5px 0; /* Preenchimento para área de clique */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Transição suave no hover */
+    border-bottom: 2px solid transparent; /* Borda transparente para efeito no hover */
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* Estilo para o link ativo (página atual) */
+    color: var(--secondary-color); /* Muda a cor no hover/ativo */
+    border-bottom: 2px solid var(--secondary-color); /* Adiciona borda no hover/ativo */
+}
+
+/* --- Seção de Notícia Destaque --- */
+.featured-news {
+    margin: 40px 0; /* Margem superior e inferior */
+    background-color: var(--white-color); /* Fundo branco para a caixa de destaque */
+    border-radius: 8px; /* Cantos arredondados */
+    overflow: hidden; /* Garante que a imagem não ultrapasse as bordas arredondadas */
+    box-shadow: var(--box-shadow-medium); /* Sombra para o destaque */
+}
+
+.featured-article {
+    display: flex; /* Layout flexível para imagem e texto do destaque */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+}
+
+.featured-article img {
+    width: 55%; /* Ocupa 55% da largura em telas grandes */
+    height: auto; /* Altura automática */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    min-height: 300px; /* Altura mínima para a imagem do destaque */
+    flex-shrink: 0; /* Impede que a imagem encolha mais que o necessário */
+}
+
+.featured-text {
+    width: 45%; /* Ocupa 45% da largura restante */
+    padding: 30px; /* Preenchimento interno */
+    display: flex; /* Layout flexível para os elementos de texto */
+    flex-direction: column; /* Coloca os elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente o texto */
+}
+
+.featured-text h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.2; /* Altura da linha para títulos */
+}
+
+.featured-text p {
+    font-size: 1.05rem;
+}
+
+/* --- Tags de Categoria --- */
+.category-tag {
+    display: inline-block; /* Permite aplicar padding e margin */
+    background-color: var(--secondary-color); /* Cor de fundo da tag */
+    color: var(--white-color); /* Cor do texto da tag */
+    padding: 5px 12px; /* Preenchimento interno */
+    border-radius: 20px; /* Cantos bem arredondados (formato de pílula) */
+    font-size: 0.8rem; /* Tamanho da fonte menor */
+    font-weight: 600; /* Peso da fonte */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+/* --- Botão "Ler Mais" Geral --- */
+.read-more-btn {
+    display: inline-block; /* Permite aplicar padding e margin */
+    background-color: var(--primary-color); /* Cor de fundo do botão */
+    color: var(--white-color); /* Cor do texto do botão */
+    padding: 12px 25px; /* Preenchimento interno */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Cantos levemente arredondados */
+    margin-top: 15px; /* Margem superior */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    font-weight: 600; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto no botão */
+}
+
+.read-more-btn:hover {
+    background-color: var(--secondary-color); /* Muda a cor no hover */
+    transform: translateY(-2px); /* Efeito de leve levantamento no hover */
+}
+
+/* --- Grid de Últimas Notícias --- */
+.latest-news-grid {
+    margin-bottom: 40px; /* Margem inferior da seção */
+}
+
+.latest-news-grid h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    text-align: center; /* Centraliza o título */
+    color: var(--primary-color);
+    margin: 40px 0 30px; /* Margem superior, sem margem lateral, margem inferior */
+}
+
+.grid-container {
+    display: grid; /* Layout de grid para os cards de notícias */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas responsivas */
+    gap: 30px; /* Espaçamento entre os cards (linhas e colunas) */
+}
+
+.news-card {
+    background-color: var(--white-color); /* Fundo branco para os cards */
+    border-radius: 8px; /* Cantos arredondados */
+    overflow: hidden; /* Garante que a imagem não vaze */
+    box-shadow: var(--box-shadow-light); /* Sombra suave para os cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave no hover */
+    display: flex; /* Layout flexível para conteúdo do card */
+    flex-direction: column; /* Coloca os elementos em coluna */
+}
+
+.news-card:hover {
+    transform: translateY(-5px); /* Efeito de levantamento no hover */
+    box-shadow: var(--box-shadow-medium); /* Sombra mais pronunciada no hover */
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens dos cards */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.news-card .category-tag {
+    margin: 15px 15px 0; /* Espaço para a tag dentro do card */
+}
+
+.news-card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 10px 15px 5px; /* Margens para o título do card */
+}
+
+.news-card .article-meta {
+    font-size: 0.9em;
+    color: var(--dark-gray);
+    margin: 0 15px 10px; /* Margens para os metadados */
+}
+
+.news-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    padding: 0 15px; /* Preenchimento lateral */
+    margin-bottom: 15px;
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante, empurrando o botão para baixo */
+}
+
+.news-card .read-more-btn {
+    align-self: flex-start; /* Alinha o botão à esquerda dentro do card */
+    margin: 0 15px 15px; /* Margem para o botão dentro do card */
+}
+
+/* --- Rodapé Principal (Footer) --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade ao rodapé */
+    margin-top: 50px; /* Espaço extra antes do rodapé */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza itens */
+    gap: 15px; /* Espaço entre o texto de copyright e os links */
+}
+
+.footer-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    margin: 0 10px; /* Espaçamento entre os links do rodapé */
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Estilos para Páginas de Categoria (Ex: geografia.html, sociologia.html) --- */
+/* Cabeçalho específico da página de categoria */
+.category-page-header {
+    background-color: var(--secondary-color); /* Cor de fundo diferente para destacar */
+    color: var(--white-color);
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+}
+
+.category-page-header h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+/* Estilo para artigos completos nas páginas de categoria */
+.article-full {
+    background-color: var(--white-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+}
+
+.article-full .article-meta {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--medium-gray); /* Separador sutil */
+    padding-bottom: 10px;
+    display: flex; /* Para alinhar tag e meta */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para quebrar a linha em telas menores */
+    gap: 10px;
+}
+
+.article-full .article-meta .category-tag {
+    margin-bottom: 0; /* Remove margem inferior da tag dentro do meta */
+}
+
+.article-full img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto; /* Centraliza a imagem */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.article-full h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.article-full h4 { /* Para subtítulos dentro do artigo */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--secondary-color); /* Pequeno destaque no subtítulo */
+    padding-left: 10px;
+}
+
+.article-full p {
+    font-size: 1.1rem;
+    line-height: 1.8; /* Aumenta a legibilidade em blocos de texto longos */
+    margin-bottom: 1em;
+    text-align: justify; /* Justifica o texto para um visual mais formal */
+}
+
+.article-full ul, .article-full ol {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1em;
+    margin-left: 25px; /* Recuo para listas */
+}
+
+.article-full li {
+    margin-bottom: 0.5em;
+}
+
+/* --- Responsividade (Media Queries) --- */
+/* Adaptação para telas menores (tablets e smartphones) */
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: column; /* Empilha logo e navegação */
+        text-align: center;
+    }
+    .main-nav ul {
+        margin-top: 15px;
+        gap: 10px;
+    }
+    .main-nav ul li {
+        margin: 0 8px; /* Ajusta margem para links */
+    }
+    .featured-article {
+        flex-direction: column; /* Empilha imagem e texto no destaque */
+    }
+    .featured-article img,
+    .featured-text {
+        width: 100%; /* Ocupa a largura total */
+    }
+    .featured-text {
+        padding: 20px;
+    }
+    .featured-text h2 {
+        font-size: 2rem;
+    }
+    .category-page-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    .main-nav ul li {
+        margin: 0 5px;
+    }
+    .main-nav ul li a {
+        font-size: 1rem;
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+    .latest-news-grid h2 {
+        font-size: 1.8rem;
+    }
+    .news-card h3 {
+        font-size: 1.3rem;
+    }
+    .article-full h3 {
+        font-size: 1.7rem;
+    }
+    .article-full p, .article-full ul, .article-full ol {
+        font-size: 1rem;
+    }
+    .article-full h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    .main-nav ul {
+        flex-direction: column; /* Links de navegação em coluna */
+        gap: 8px;
+    }
+    .main-nav ul li {
+        margin: 0;
+    }
+    .featured-text h2 {
+        font-size: 1.6rem;
+    }
+    .featured-text p {
+        font-size: 0.95rem;
+    }
+    .category-page-header h2 {
+        font-size: 1.8rem;
+    }
+    .article-full {
+        padding: 20px; /* Menor preenchimento em telas muito pequenas */
+    }
+    .article-full .article-meta {
+        flex-direction: column; /* Empilha autor/data e tag */
+        align-items: flex-start;
+    }
+}

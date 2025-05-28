@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Mundial IS - Geografia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos da sua página de geografia com o grid das "aulas" */
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #222;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .news-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px; /* Espaço antes do rodapé */
+        }
+
+        .news-card { /* Renomeado para 'aula-card' ou similar para clareza no futuro, mas mantido para compatibilidade */
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 180px; /* Altura fixa para as imagens */
+            object-fit: cover;
+            display: block;
+        }
+
+        .news-card .category-tag {
+            background-color: #007bff; /* Pode ser alterado para uma cor mais neutra ou remover se não for categoria */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            margin: 15px 15px 0;
+            display: inline-block;
+        }
+
+        .news-card h3 {
+            font-size: 1.3rem;
+            color: #333;
+            padding: 0 15px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .news-card .article-meta { /* Pode ser removido se não houver autor/data para as aulas */
+            font-size: 0.85rem;
+            color: #777;
+            padding: 0 15px;
+            margin-bottom: 10px;
+        }
+
+        .news-card p {
+            font-size: 0.95rem;
+            color: #555;
+            padding: 0 15px 15px;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .news-card .read-more-btn { /* Pode ser renomeado para 'view-lesson-btn' */
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 15px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .news-card .read-more-btn:hover {
+            background-color: #218838;
+        }
+
+        /* --- Main Layout and Header/Footer --- */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-header {
+            background-color: #004080;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .logo h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .main-nav li {
+            margin-left: 30px;
+        }
+
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: #a0d9e8;
+        }
+
+        .main-footer {
+            background-color: #004080;
+            color: #fff;
+            padding: 25px 0;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #a0d9e8;
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-nav li {
+                margin: 10px 0;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                margin-top: 15px;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .news-grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="./imagens/logo-jornal-mundial-is.png" alt="Logo Jornal Mundial IS" class="logo-img">
+                <h1>Jornal Mundial IS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="geografia.html">Geografia</a></li>
+                    <li><a href="sociologia.html">Sociologia</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Tópicos e Aulas de Geografia</h2>
+
+        <section class="news-grid-container">
+            <article class="news-card">
+                <img src="./imagens/aula1-geografia.jpg" alt="Mapa Mundi, globo e bússola, representando conceitos básicos de geografia.">
+                <span class="category-tag">Aula 1</span>
+                <h3>Paisagem</h3>
+                <p class="article-meta">Elementos e Transformações</p>
+                <p>Compreenda o conceito de paisagem geográfica, seus elementos naturais e culturais, e como ela se transforma ao longo do tempo.</p>
+                <a href="aula1-geografia.html" class="read-more-btn">Ver Conteúdo</a>
+            </article>
+
+            <article class="news-card">
+                <img src="./imagens/aula2-geografia.jpg" alt="Diferentes tipos de mapas, compasso e régua, ilustrando cartografia.">
+                <span class="category-tag">Aula 2</span>
+                <h3>Território e Suas Dimensões</h3>
+                <p class="article-meta">Domínio e Poder</p>
+                <p>Explore o conceito de território como espaço de poder e dominação, e suas diversas dimensões políticas, econômicas e culturais.</p>
+                <a href="aula2-geografia.html" class="read-more-btn">Ver Conteúdo</a>
+            </article>
+
+            <article class="news-card">
+                <img src="./imagens/aula3-geografia.jpg" alt="Gráfico de população, pessoas diversas e símbolos demográficos.">
+                <span class="category-tag">Aula 3</span>
+                <h3>Estado</h3>
+                <p class="article-meta">Formação e Organização</p>
+                <p>Analise a formação e a organização do Estado, sua importância no cenário geopolítico e as diferentes formas de governo.</p>
+                <a href="aula3-geografia.html" class="read-more-btn">Ver Conteúdo</a>
+            </article>
+
+            <article class="news-card">
+                <img src="./imagens/aula4-geografia.jpg" alt="Vista aérea de uma cidade com arranha-céus e áreas mais densas.">
+                <span class="category-tag">Aula 4</span>
+                <h3>Nação</h3>
+                <p class="article-meta">Identidade e Pertença</p>
+                <p>Estude o conceito de nação, os laços culturais e históricos que a definem e a relação entre nação e Estado.</p>
+                <a href="aula4-geografia.html" class="read-more-btn">Ver Conteúdo</a>
+            </article>
+
+            <article class="news-card">
+                <img src="./imagens/aula5-geografia.jpg" alt="Floresta exuberante com rio e elementos de energias renováveis.">
+                <span class="category-tag">Aula 5</span>
+                <h3>Fronteiras</h3>
+                <p class="article-meta">Limites e Conflitos</p>
+                <p>Compreenda a natureza das fronteiras geográficas, seu papel na delimitação de territórios e os conflitos a elas relacionados.</p>
+                <a href="aula5-geografia.html" class="read-more-btn">Ver Conteúdo</a>
+            </article>
+
+            <article class="news-card">
+                <img src="./imagens/aula9-urbanizacao-rede.jpg" alt="Montagem mostrando transição rural-urbana e um mapa conceitual de cidades interconectadas, simbolizando o processo de urbanização e as redes urbanas.">
+                <span class="category-tag">Aula 9</span>
+                <h3>Urbanização</h3>
+                <p class="article-meta">Processo, Hierarquia e Redes</p>
+                <p>Aprofunde-se no processo de urbanização, compreendendo como as cidades se organizam em hierarquias e se conectam em complexas redes.</p>
+                <a href="aula9-geografia.html" class="read-more-btn">Ver Conteúdo</a>
+            </article>
+
+    
+
+            <article class="news-card">
+                <img src="./imagens/aula12-globalizacao.jpg" alt="Mapa mundi estilizado com linhas de conexão entre continentes e ícones de comércio, tecnologia e pessoas, representando a globalização.">
+                <span class="category-tag">Aula 12</span>
+                <h3>Globalização</h3>
+                <p class="article-meta">A Conexão Mundial de Economias, Culturas e Sociedades</p>
+                <p>Entenda a globalização em suas diversas dimensões, seus impactos e os desafios de um mundo cada vez mais interligado.</p>
+                <a href="aula12-geografia.html" class="read-more-btn">Ver Conteúdo</a>
+            </article>
+
+           
+        
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Jornal Mundial IS. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

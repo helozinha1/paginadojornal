@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Mundial IS - Aula 12: Globalização</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            padding: 32px 28px;
+            flex-grow: 1;
+        }
+        .lesson-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .lesson-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        .lesson-image {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 24px;
+        }
+        .lesson-text {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .lesson-text h2 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .lesson-text h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .lesson-text ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .lesson-text li {
+            margin-bottom: 5px;
+        }
+        .lesson-author {
+            margin-top: 32px;
+            font-size: 0.95rem;
+            color: #888;
+            text-align: right;
+        }
+        /* Estilos do cabeçalho e rodapé, replicados do seu layout principal */
+        .main-header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        .logo h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .main-nav a:hover {
+            color: #a0d9e8;
+        }
+        .main-footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 25px 0;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #a0d9e8;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 20px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-nav li {
+                margin: 10px 0;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .footer-links {
+                margin-top: 15px;
+            }
+            .lesson-title {
+                font-size: 2rem;
+            }
+            .lesson-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./imagens/logo-jornal-mundial-is.png" alt="Logo Jornal Mundial IS" class="logo-img">
+                <h1>Jornal Mundial IS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="geografia.html">Geografia</a></li>
+                    <li><a href="sociologia.html">Sociologia</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="lesson-title">Aula 12: Globalização</div>
+        <div class="lesson-subtitle">A Conexão Mundial de Economias, Culturas e Sociedades</div>
+        <img src="./imagens/aula12-globalizacao.jpg" alt="Mapa mundi estilizado com linhas de conexão entre continentes e ícones de comércio, tecnologia e pessoas, representando a globalização." class="lesson-image">
+        <div class="lesson-text">
+            A **globalização** é um dos conceitos mais importantes e complexos da Geografia contemporânea. Ela descreve um processo de intensificação das interconexões e interdependências entre países, economias, culturas e sociedades em escala mundial. Não é um fenômeno novo, mas sua velocidade e profundidade se aceleraram drasticamente nas últimas décadas, impulsionadas principalmente pelos avanços tecnológicos e pela liberalização econômica.
+
+            <br><br>
+
+            <h2>Dimensões da Globalização</h2>
+            A globalização se manifesta em diversas frentes:
+
+            <h3>Globalização Econômica</h3>
+            <ul>
+                <li>Mercado Global: Abertura de mercados nacionais ao comércio e investimento estrangeiro.</li>
+                <li>Transnacionais: Empresas operam em múltiplos países, buscando menores custos de produção e acesso a novos mercados.</li>
+                <li>Fluxos de Capital: Movimentação rápida de dinheiro, investimentos e especulação financeira através das fronteiras.</li>
+                <li>Divisão Internacional do Trabalho (DIT): Reorganização da produção em escala global, com diferentes países se especializando em etapas específicas da cadeia produtiva.</li>
+            </ul>
+
+            <h3>Globalização Cultural</h3>
+            <ul>
+                <li>Homogeneização Cultural: Difusão de produtos culturais (música, filmes, fast-food, moda) de grandes centros para o mundo, gerando uma certa padronização.</li>
+                <li>Hibridismo Cultural: Mistura de elementos culturais de diferentes origens, resultando em novas expressões e manifestações.</li>
+                <li>Intercâmbio e Conexão: Maior acesso a diferentes culturas através da internet, viagens e mídias, promovendo o diálogo e a compreensão, mas também tensões.</li>
+            </ul>
+
+            <h3>Globalização Social</h3>
+            <ul>
+                <li>Fluxos Migratórios: Aumento da circulação de pessoas em busca de trabalho, segurança ou melhores condições de vida.</li>
+                <li>Organizações Não Governamentais (ONGs): Atuam em escala global, abordando questões sociais, ambientais e humanitárias.</li>
+                <li>Movimentos Sociais Transnacionais: Pessoas se organizam em redes além das fronteiras para lutar por causas comuns (ex: direitos humanos, meio ambiente).</li>
+            </ul>
+
+            <h3>Globalização Tecnológica</h3>
+            <ul>
+                <li>Revolução da Informação e Comunicação: O desenvolvimento da internet, telefonia móvel e outras tecnologias permitiu a troca instantânea de informações e a conexão global.</li>
+                <li>Transportes: Aprimoramento de meios de transporte (aviação, navios porta-contêineres) que reduzem o tempo e o custo do deslocamento de pessoas e mercadorias.</li>
+            </ul>
+
+            <br>
+
+            <h2>Vantagens e Desafios da Globalização</h2>
+            A globalização é um processo de duas faces:
+
+            <h3>Vantagens:</h3>
+            <ul>
+                <li>Maior Fluxo de Informações e Conhecimento.</li>
+                <li>Aumento da Variedade de Produtos e Serviços.</li>
+                <li>Potencial para Crescimento Econômico e Redução da Pobreza (em algumas regiões).</li>
+                <li>Cooperação Internacional para Problemas Globais (clima, pandemias).</li>
+            </ul>
+
+            <h3>Desafios:</h3>
+            <ul>
+                <li>Aumento da Desigualdade: Benefícios concentrados em poucos países/empresas, marginalizando outros.</li>
+                <li>Perda de Soberania Nacional: Estados podem ter sua autonomia limitada por decisões de organismos internacionais ou grandes corporações.</li>
+                <li>Ameaças Culturais: Risco de perda de culturas locais devido à influência de culturas dominantes.</li>
+                <li>Deterioração Ambiental: Aumento da produção e consumo gera mais pressão sobre os recursos naturais.</li>
+                <li>Espalhamento Rápido de Crises: Crises financeiras ou epidemias podem se alastrar rapidamente pelo mundo.</li>
+            </ul>
+
+            <br>
+
+            A globalização é um processo dinâmico e contínuo, que redefine as relações geográficas, econômicas e sociais em escala planetária, gerando tanto oportunidades quanto complexos problemas a serem enfrentados.
+        </div>
+
+        <div class="lesson-author">
+          Conteúdo adaptado por Jornal Mundial IS &nbsp;|&nbsp; 27 de maio de 2025
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Jornal Mundial IS. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

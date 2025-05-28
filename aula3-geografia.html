@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Mundial IS - Aula 3: Estado</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            padding: 32px 28px;
+            flex-grow: 1;
+        }
+        .lesson-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .lesson-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        .lesson-image {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 24px;
+        }
+        .lesson-text {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .lesson-text h2 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .lesson-text h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .lesson-text ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .lesson-text li {
+            margin-bottom: 5px;
+        }
+        .lesson-author {
+            margin-top: 32px;
+            font-size: 0.95rem;
+            color: #888;
+            text-align: right;
+        }
+        /* Estilos do cabeçalho e rodapé, replicados do seu layout principal */
+        .main-header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        .logo h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .main-nav a:hover {
+            color: #a0d9e8;
+        }
+        .main-footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 25px 0;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #a0d9e8;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 20px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-nav li {
+                margin: 10px 0;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .footer-links {
+                margin-top: 15px;
+            }
+            .lesson-title {
+                font-size: 2rem;
+            }
+            .lesson-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./imagens/logo-jornal-mundial-is.png" alt="Logo Jornal Mundial IS" class="logo-img">
+                <h1>Jornal Mundial IS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="geografia.html">Geografia</a></li>
+                    <li><a href="sociologia.html">Sociologia</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="lesson-title">Aula 3: O Conceito de Estado em Geografia</div>
+        <div class="lesson-subtitle">Estrutura, Poder e Organização Territorial</div>
+        <img src="./imagens/aula3-geografia.jpg" alt="Mapa-múndi político com fronteiras nítidas e uma bandeira de um país, simbolizando o Estado." class="lesson-image">
+        <div class="lesson-text">
+            Em Geografia, o conceito de Estado é fundamental para compreender a organização política e territorial do mundo. Não se confunde com "país" ou "nação", embora esses termos sejam frequentemente usados de forma interligada no senso comum. Geographicamente, o Estado é a instituição política que exerce soberania sobre um determinado território e sua população. Ele é o principal ator na organização e gestão do espaço.
+
+            <br><br>
+
+            <h2>Elementos Constitutivos do Estado</h2>
+            Para que uma entidade seja considerada um Estado no sentido geográfico e político, ela geralmente precisa possuir os seguintes elementos:
+
+            <ul>
+                <li>Território Definido: Uma porção da superfície terrestre com limites claramente estabelecidos e reconhecidos internacionalmente. Inclui solo, subsolo, espaço aéreo e, em muitos casos, águas territoriais.</li>
+                <li>População Permanente: Um conjunto de pessoas que reside e está ligada a esse território, formando a base humana para a existência do Estado.</li>
+                <li>Governo Efetivo: Uma estrutura de poder político e administrativo capaz de exercer controle sobre o território e a população, impondo leis, garantindo a ordem e prestando serviços.</li>
+                <li>Soberania: A capacidade de exercer autoridade máxima e independente dentro de suas fronteiras, sem submissão a outro poder externo. A soberania implica o reconhecimento por outros Estados.</li>
+            </ul>
+
+            <h2>O Estado na Organização do Espaço</h2>
+            O papel do Estado é central na forma como o espaço é planejado, utilizado e transformado. Suas ações incluem:
+
+            <ul>
+                <li>Criação de Leis e Normas: Regulam o uso da terra, a construção de infraestruturas, a exploração de recursos naturais e a proteção ambiental.</li>
+                <li>Provisão de Serviços Públicos: Educação, saúde, segurança, transporte, saneamento – a distribuição desses serviços molda a acessibilidade e a qualidade de vida em diferentes partes do território.</li>
+                <li>Definição de Infraestrutura: Construção de estradas, portos, aeroportos, redes de energia e comunicação, que conectam e integram o território.</li>
+                <li>Regulação Econômica: Políticas fiscais, comerciais e industriais que influenciam a localização de atividades econômicas e o fluxo de capitais.</li>
+                <li>Gestão de Fronteiras: Controle de entradas e saídas de pessoas e mercadorias, definindo a permeabilidade e segurança dos limites territoriais.</li>
+            </ul>
+
+            <br>
+
+            <h2>Formas de Estado e Tipos de Governo</h2>
+            É importante diferenciar Forma de Estado de Tipo de Governo.
+            <ul>
+                <li>Forma de Estado: Refere-se à distribuição do poder no território. Exemplos incluem:
+                    <ul>
+                        <li>Unitário: O poder é centralizado (ex: França, Japão).</li>
+                        <li>Federal: O poder é dividido entre um governo central e unidades subnacionais (estados, províncias), que possuem certa autonomia (ex: Brasil, EUA, Alemanha).</li>
+                    </ul>
+                </li>
+                <li>Tipo de Governo: Refere-se à forma como o poder é exercido e os governantes são escolhidos (ex: Monarquia, República, Democracia, Ditadura).</li>
+            </ul>
+
+            <br>
+
+            <h2>Geografia Política e o Estudo do Estado</h2>
+            A Geografia Política se debruça sobre o estudo do Estado como principal ator na organização do espaço geográfico. Ela analisa como o poder estatal se manifesta no território, as relações entre Estados (geopolítica), as disputas por recursos, e a forma como as decisões políticas afetam a vida das pessoas e a paisagem em diferentes escalas. Compreender o Estado é fundamental para entender a dinâmica de poder que molda o mundo em que vivemos.
+        </div>
+
+        <div class="lesson-author">
+          Conteúdo adaptado por Jornal Mundial IS &nbsp;|&nbsp; 27 de maio de 2025
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Jornal Mundial IS. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
