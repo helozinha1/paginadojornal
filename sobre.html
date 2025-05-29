@@ -1,0 +1,214 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Mundial IS - Sobre Nós</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para a página Sobre Nós */
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #222;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-section {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
+            color: #004080;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            color: #555;
+        }
+
+        .team-grid {
+            display: grid;
+            /* Ajuste para tentar manter mais membros na linha. 
+               O 'minmax' com um valor menor ajuda em telas intermediárias. */
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); 
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 50px; /* Espaço antes do rodapé */
+            justify-content: center; /* Centraliza os itens se houver espaço extra */
+            align-items: stretch; /* Garante que todos os cards tenham a mesma altura */
+        }
+
+        .team-member-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+            display: flex; /* Para flexbox interno para alinhamento de conteúdo */
+            flex-direction: column;
+            justify-content: space-between; /* Garante que o conteúdo se espalhe */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .team-member-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Imagens redondas */
+            object-fit: cover;
+            margin: 0 auto 15px auto; /* Centraliza a imagem */
+            border: 4px solid #e74c3c; /* Borda colorida para destaque */
+        }
+
+        .team-member-card h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .team-member-card .role {
+            font-size: 0.95rem;
+            color: #004080;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-member-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
+        }
+
+        .placeholder-card {
+            background: #f0f0f0; /* Cor de fundo para o quadrado vazio */
+            border: 2px dashed #ccc; /* Borda tracejada para indicar que é um espaço vago */
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            min-height: 250px; /* Garante que tenha um tamanho similar aos outros cards */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra mais suave */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .about-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-section p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Jornal Mundial IS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="geografia.html">Geografia</a></li>
+                    <li><a href="sociologia.html">Sociologia</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Sobre o Jornal Mundial IS</h2>
+
+        <section class="about-section">
+            <h2>Nossa Missão</h2>
+            <p>
+                O Jornal Mundial IS é mais do que um projeto; é a nossa plataforma para transformar os trabalhos escolares do ensino médio em experiências práticas. Aqui, aplicamos ativamente o conhecimento adquirido no curso técnico, complementamos com o que já sabemos e estudamos por fora. Nosso objetivo é conectar o conteúdo acadêmico com os desafios do cotidiano, promovendo o pensamento crítico e a cidadania através da informação de qualidade.
+            </p>
+
+            <h2>Nossa Equipe</h2>
+            <p>
+                Conheça os profissionais apaixonados por educação e jornalismo que fazem o Jornal Mundial IS acontecer. Trabalhamos juntos para trazer conteúdo de alta qualidade, desvendando as nuances do nosso planeta e das sociedades que o habitam.
+            </p>
+
+            <div class="team-grid">
+                <article class="team-member-card">
+                    <img src="./imagens/helloysa.jpg" alt="Foto de Helloysa">
+                    <h3>Helloysa</h3>
+                    <p class="role">Design e Desenvolvimento Frontend</p>
+                    <p>Com sua visão criativa e habilidades de codificação, Helloysa une estética e funcionalidade, garantindo uma experiência visual e técnica de alta qualidade para o nosso jornal.</p>
+                </article>
+
+                <article class="team-member-card">
+                    <img src="img/yago.png" alt="Foto de Yago">
+                    <h3>Yago</h3>
+                    <p class="role">Desenvolvedor Frontend</p>
+                    <p>Yago transforma nossas ideias em realidade, garantindo que o site seja funcional, rápido e responsivo.</p>
+                </article>
+
+                <article class="team-member-card">
+                    <img src="./imagens/rodrigo.jpg" alt="Foto de Rodrigo">
+                    <h3>Rodrigo</h3>
+                    <p class="role">Desenvolvedor Frontend</p>
+                    <p>Com foco na experiência do usuário, Rodrigo trabalha para que a navegação no Jornal Mundial IS seja sempre intuitiva e agradável.</p>
+                </article>
+
+                <article class="team-member-card">
+                    <img src="img/thiago.png" alt="Foto de Thiago">
+                    <h3>Thiago</h3>
+                    <p class="role">Pesquisador de Conteúdo</p>
+                    <p>Thiago é responsável por apurar e organizar os dados e informações que fundamentam nossas análises e notícias.</p>
+                </article>
+
+                <article class="placeholder-card">
+                    Novo Membro em Breve!
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Jornal Mundial IS. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
