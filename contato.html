@@ -1,0 +1,339 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Mundial IS - Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para a página de Contato */
+        body {
+            background-color: #f0f2f5; /* Um cinza claro de fundo para a página */
+        }
+
+        .page-title {
+            font-size: 3rem; /* Um pouco maior */
+            font-weight: 700; /* Negrito da fonte Merriweather */
+            color: #1a1a1a;
+            margin-top: 50px; /* Mais espaço no topo */
+            margin-bottom: 40px; /* Mais espaço abaixo */
+            text-align: center;
+            font-family: 'Merriweather', serif; /* Usando a fonte de título */
+        }
+
+        .contact-section {
+            padding: 40px 0; /* Mais padding */
+            text-align: center;
+            max-width: 900px; /* Um pouco mais largo */
+            margin: 0 auto 60px auto; /* Centraliza e adiciona espaço no rodapé */
+            background-color: #ffffff; /* Fundo branco para a seção principal */
+            border-radius: 12px; /* Cantos mais arredondados */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Sombra mais proeminente */
+        }
+
+        .contact-section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem; /* Títulos de seção um pouco maiores */
+            color: #004080; /* Azul principal */
+            margin-bottom: 25px; /* Mais espaço abaixo */
+        }
+
+        .contact-section p {
+            font-size: 1.15rem; /* Levemente maior */
+            line-height: 1.8;
+            max-width: 700px; /* Largura um pouco menor para o texto */
+            margin: 0 auto 40px auto; /* Centraliza e adiciona espaço */
+            color: #4a4a4a;
+        }
+
+        .contact-info {
+            margin-bottom: 50px;
+            padding: 0 20px; /* Adiciona padding lateral */
+        }
+
+        .contact-info h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.8rem;
+            color: #004080;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            font-size: 1.25rem; /* E-mail maior */
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .contact-info a {
+            color: #e74c3c; /* Cor de destaque para links (vermelho/laranja) */
+            text-decoration: none;
+            font-weight: 700; /* Mais negrito */
+            transition: color 0.3s ease; /* Transição suave na cor */
+        }
+
+        .contact-info a:hover {
+            color: #c0392b; /* Tom mais escuro no hover */
+            text-decoration: underline;
+        }
+
+        /* Seção de Exemplos de Contato */
+        .contact-examples {
+            text-align: left;
+            margin: 0 auto 50px auto; /* Centraliza e adiciona espaço */
+            max-width: 700px; /* Largura menor para a caixa */
+            background: #fdfdfd; /* Fundo quase branco */
+            padding: 35px; /* Mais padding */
+            border-radius: 10px; /* Cantos arredondados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+            border: 1px solid #eee; /* Borda sutil */
+        }
+
+        .contact-examples h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem; /* Título maior */
+            color: #004080;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .contact-examples ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-examples li {
+            font-size: 1.1rem; /* Texto maior */
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 18px; /* Mais espaço entre os itens */
+            position: relative;
+            padding-left: 30px; /* Mais espaço para o bullet */
+        }
+
+        .contact-examples li::before {
+            content: '✓'; /* Um checkmark no lugar do bullet */
+            color: #27ae60; /* Cor verde para o checkmark */
+            font-weight: bold;
+            display: inline-block;
+            width: 1.2em; /* Ajuste o tamanho do checkmark */
+            margin-left: -1.2em;
+            position: absolute;
+            left: 0;
+            top: 0; /* Alinha com o topo do texto */
+        }
+
+
+        .contact-form {
+            background: #fff;
+            padding: 50px; /* Mais padding */
+            border-radius: 12px; /* Cantos arredondados */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Sombra mais proeminente */
+            text-align: left;
+            margin: 0 auto 60px auto; /* Centraliza e adiciona espaço */
+            max-width: 700px; /* Mesma largura da caixa de exemplos */
+            border: 1px solid #eee; /* Borda sutil */
+        }
+
+        .contact-form h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            color: #004080;
+            margin-bottom: 30px; /* Mais espaço abaixo do título do formulário */
+            text-align: center;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 1.05rem; /* Levemente maior */
+            color: #333;
+            margin-bottom: 10px; /* Mais espaço */
+            font-weight: 600;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: calc(100% - 24px); /* 100% menos o padding e borda */
+            padding: 12px; /* Mais padding */
+            margin-bottom: 25px; /* Mais espaço abaixo dos campos */
+            border: 1px solid #ccc; /* Borda mais clara */
+            border-radius: 6px; /* Cantos mais arredondados */
+            font-size: 1.05rem; /* Fonte maior */
+            font-family: 'Open Sans', sans-serif;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: #004080; /* Borda azul ao focar */
+            box-shadow: 0 0 8px rgba(0, 64, 128, 0.2); /* Sombra suave ao focar */
+            outline: none; /* Remove o contorno padrão do navegador */
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px; /* Altura mínima maior */
+        }
+
+        .contact-form button {
+            background-color: #e74c3c; /* Cor de destaque para o botão (vermelho/laranja) */
+            color: #fff;
+            padding: 14px 30px; /* Mais padding no botão */
+            border: none;
+            border-radius: 8px; /* Cantos arredondados */
+            font-size: 1.2rem; /* Fonte maior no botão */
+            font-weight: 700; /* Mais negrito */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            width: 100%;
+            letter-spacing: 0.5px; /* Espaçamento entre letras */
+        }
+
+        .contact-form button:hover {
+            background-color: #c0392b; /* Tom mais escuro no hover */
+            transform: translateY(-2px); /* Efeito de "levantar" */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2rem;
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+
+            .contact-section {
+                padding: 25px 0;
+                margin: 0 15px 40px 15px; /* Margem lateral e espaço */
+            }
+
+            .contact-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .contact-section p {
+                font-size: 1rem;
+                padding: 0 15px;
+                margin-bottom: 25px;
+            }
+
+            .contact-examples,
+            .contact-form {
+                padding: 25px;
+                margin: 0 15px 40px 15px;
+            }
+
+            .contact-examples h3,
+            .contact-form h3 {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+
+            .contact-examples li {
+                font-size: 0.95rem;
+                padding-left: 25px;
+            }
+
+            .contact-examples li::before {
+                width: 1em;
+                margin-left: -1em;
+            }
+
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea {
+                padding: 10px;
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+
+            .contact-form textarea {
+                min-height: 100px;
+            }
+
+            .contact-form button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Jornal Mundial IS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="geografia.html">Geografia</a></li>
+                    <li><a href="sociologia.html">Sociologia</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Entre em Contato</h2>
+
+        <section class="contact-section">
+            <p>
+                Tem alguma pergunta, sugestão ou feedback? Fale conosco! Valorizamos a sua opinião e estamos prontos para ajudar no que precisar.
+            </p>
+
+            <div class="contact-info">
+                <h3>Nosso E-mail</h3>
+                <p>Para dúvidas gerais, parcerias ou informações, envie um e-mail para:</p>
+                <p><a href="mailto:contato@jornalmundialis.com">contato@jornalmundialis.com</a></p>
+                <p>(Lembre-se que este é um e-mail de exemplo para o trabalho escolar.)</p>
+            </div>
+
+            <div class="contact-examples">
+                <h3>Como podemos ajudar?</h3>
+                <ul>
+                    <li>Dúvidas sobre o conteúdo: Se você tem perguntas sobre alguma matéria de Geografia ou Sociologia que publicamos.</li>
+                    <li>Sugestões de pauta: Tem uma ideia para uma nova notícia, um tema para análise ou um evento interessante? Queremos saber!</li>
+                    <li>Feedback sobre o site: Nos ajude a melhorar! Reporte erros, problemas de visualização ou envie sugestões para aprimorar a sua experiência.</li>
+                    <li>Parcerias e colaborações: Se você é estudante, professor ou instituição e tem interesse em colaborar com nosso projeto escolar.</li>
+                    <li>Correções: Encontrou alguma informação que precisa ser corrigida ou atualizada? Avise-nos!</li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Envie uma Mensagem Direta</h3>
+                <form action="https://formspree.io/f/xpwraaed" method="POST">
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Sua Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Jornal Mundial IS. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

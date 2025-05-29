@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícia: Desafios e Impactos da Desigualdade Racial na Sociedade - Jornal Mundial IS</title>
+  <link rel="stylesheet" href="style.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos copiados do seu modelo "Planejamento Urbano", ajustados para o Jornal Mundial IS */
+    body {
+      background: #f4f4f4;
+      font-family: 'Open Sans', sans-serif; /* Usando Open Sans para o corpo */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      padding: 32px 28px;
+      flex-grow: 1;
+    }
+    .titulo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 10px;
+      font-family: 'Merriweather', serif; /* Merriweather para títulos */
+    }
+    .subtitulo {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 24px;
+    }
+    .imagem-noticia {
+      width: 100%;
+      max-height: 340px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Adicionado sombra para imagem */
+    }
+    .texto {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .texto h2 {
+      font-size: 1.8rem;
+      color: #0056b3; /* Cor azul para subtítulos principais */
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #dc3545; /* Linha vermelha de destaque */
+      padding-bottom: 5px;
+      font-family: 'Merriweather', serif;
+    }
+    .texto h3 {
+      font-size: 1.4rem;
+      color: #222; /* Cor um pouco mais escura para sub-subtítulos */
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-family: 'Merriweather', serif;
+    }
+    .texto ul {
+      list-style-type: disc;
+      margin-left: 30px; /* Mais indentação para listas */
+      margin-bottom: 15px;
+      color: #444; /* Cor mais escura para texto de lista */
+    }
+    .texto li {
+      margin-bottom: 8px; /* Mais espaço entre itens da lista */
+      line-height: 1.6;
+    }
+    .autor {
+      margin-top: 32px;
+      font-size: 0.95rem;
+      color: #888;
+      text-align: right;
+    }
+    .cabecalho-jornal {
+      background: #004080;
+      color: #fff;
+      padding: 28px 0 16px 0;
+      border-radius: 0; /* Remove border-radius para consistência no topo */
+      text-align: center;
+      margin-bottom: 32px; /* Adiciona margem abaixo do cabeçalho */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Mantém a sombra */
+      letter-spacing: 2px;
+    }
+    .cabecalho-jornal .nome-jornal {
+      font-size: 2.7rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .cabecalho-jornal .edicao {
+      font-size: 1.1rem;
+      margin-top: 6px;
+      letter-spacing: 1px;
+    }
+    .resumo-box {
+      background-color: #e0f2f7;
+      border-left: 5px solid #007bff;
+      padding: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* Adicionado sombra sutil */
+    }
+    .resumo-box p {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.6;
+      font-style: italic;
+      margin: 0;
+    }
+    .main-footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 50px;
+      font-size: 1rem;
+      width: 100%;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.10);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .cabecalho-jornal .nome-jornal {
+        font-size: 2.2rem;
+      }
+      .cabecalho-jornal .edicao {
+        font-size: 0.9rem;
+      }
+      .container {
+        margin: 20px auto;
+        padding: 20px 20px;
+      }
+      .titulo {
+        font-size: 2rem;
+      }
+      .subtitulo {
+        font-size: 1rem;
+      }
+      .texto {
+        font-size: 0.95rem;
+      }
+      .texto h2 {
+        font-size: 1.5rem;
+      }
+      .texto h3 {
+        font-size: 1.2rem;
+      }
+      .resumo-box {
+        padding: 15px;
+      }
+      .resumo-box p {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cabecalho-jornal .nome-jornal {
+        font-size: 1.8rem;
+      }
+      .cabecalho-jornal .edicao {
+        font-size: 0.8rem;
+      }
+      .titulo {
+        font-size: 1.8rem;
+      }
+      .subtitulo {
+        font-size: 0.9rem;
+      }
+      .texto h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cabecalho-jornal">
+    <span class="nome-jornal">Jornal Mundial</span>
+    <div class="edicao">Fundado em 1951 &nbsp;|&nbsp; Edição de 29 de Maio de 2025</div>
+  </div>
+
+  <div class="container">
+    <div class="titulo">Desafios e Impactos da Desigualdade Racial na Sociedade</div>
+    <div class="subtitulo">Análise sociológica das barreiras e manifestações do racismo no Brasil e no mundo</div>
+    <img src="img/1racial.png" alt="Imagem que representa diversidade e inclusão, com pessoas de diferentes etnias" class="imagem-noticia">
+    <div class="texto">
+      A desigualdade racial é um problema social persistente que afeta a distribuição de oportunidades, o acesso a recursos e a qualidade de vida de indivíduos e grupos, perpetuando disparidades históricas. Ela se manifesta de diversas formas, desde a discriminação explícita até o racismo estrutural e institucional, impactando esferas cruciais da vida em sociedade.
+      <br><br>
+
+      <h2>O Racismo Estrutural e Suas Raízes Históricas</h2>
+      O racismo não se limita a atos individuais de preconceito. É um sistema complexo enraizado nas estruturas sociais, políticas e econômicas de uma nação. No Brasil, suas raízes profundas remontam ao período colonial e à escravidão. A abolição, em 1888, não foi seguida por políticas públicas que promovessem a inclusão da população negra libertada. Pelo contrário, a marginalização social e a negação de direitos fundamentais, como terra, educação e moradia, consolidaram um ciclo de desvantagem que perdura até hoje. Esse legado histórico se reflete em desigualdades que se reproduzem sistematicamente, afetando o acesso a oportunidades e a distribuição de poder na sociedade.
+      <br><br>
+
+      <h2>Manifestações da Desigualdade Racial no Cotidiano</h2>
+      Os impactos da desigualdade racial são amplamente visíveis em diversas áreas da vida social:
+      <h3>Educação</h3>
+      <ul>
+        <li>Acesso Desigual: Menor acesso a escolas de qualidade, resultando em desempenho acadêmico inferior em comparação a outros grupos raciais.</li>
+        <li>Currículo Eurocêntrico: A falta de representatividade e a invisibilidade da história e cultura afro-brasileira e indígena nos materiais didáticos.</li>
+        <li>Altas Taxas de Evasão: Maior índice de abandono escolar, especialmente no ensino médio, entre estudantes negros e indígenas.</li>
+      </ul>
+
+      <h3>Mercado de Trabalho e Renda</h3>
+      <ul>
+        <li>Diferença Salarial: Pessoas negras recebem salários significativamente menores do que pessoas brancas para as mesmas funções e qualificações.</li>
+        <li>Sub-representação: Baixa presença em cargos de liderança e em profissões de alto prestígio.</li>
+        <li>Informalidade: Maior inserção em trabalhos informais, com menos direitos e segurança.</li>
+      </ul>
+
+      <h3>Saúde e Bem-Estar</h3>
+      <ul>
+        <li>Acesso Precário: Dificuldade em acessar serviços de saúde de qualidade, levando a piores indicadores de saúde.</li>
+        <li>Racismo Institucional na Saúde: Experiências de discriminação no atendimento médico.</li>
+        <li>Impacto na Saúde Mental: O estresse crônico decorrente do racismo contribui para problemas de saúde mental.</li>
+      </ul>
+
+      <h3>Justiça e Segurança Pública</h3>
+      <ul>
+        <li>Encarceramento em Massa: A população negra é desproporcionalmente a mais encarcerada no Brasil.</li>
+        <li>Perfilamento Racial: Abordagens policiais baseadas na raça, resultando em maior exposição à violência.</li>
+        <li>Discriminação no Sistema Judicial: Dificuldade em acessar a justiça e ter seus direitos plenamente reconhecidos.</li>
+      </ul>
+
+      <div class="resumo-box">
+        <p>A desigualdade racial, enraizada na história de escravidão e colonialismo, manifesta-se através de um racismo estrutural que impacta profundamente a vida de indivíduos e grupos. No Brasil, essa realidade é visível na educação, mercado de trabalho, saúde e justiça, perpetuando disparidades no acesso a oportunidades e na qualidade de vida. Superar este desafio exige políticas públicas eficazes, educação antirracista e o engajamento de toda a sociedade.</p>
+      </div>
+
+      <h2>A Luta por Equidade e Justiça Racial</h2>
+      O enfrentamento da desigualdade racial é um processo contínuo que exige ações coordenadas de diversos setores da sociedade. Políticas de ações afirmativas, como cotas em universidades e universidades e concursos públicos, são ferramentas essenciais para corrigir distorções históricas e promover a inclusão. A educação antirracista, que desconstroi preconceitos e valoriza a diversidade, é fundamental desde a infância.
+      <br><br>
+      Além disso, é crucial o fortalecimento de leis e mecanismos de combate à discriminação, a promoção da representatividade em todos os espaços sociais e a conscientização sobre a importância de reconhecer e desmantelar o racismo. A mídia, as empresas e as instituições devem assumir um papel ativo na promoção da igualdade racial. A construção de uma sociedade verdadeiramente justa e democrática passa, inegavelmente, pela superação das barreiras raciais e pela garantia de que a cor da pele não seja um fator de exclusão.
+    </div>
+
+    <div class="autor">
+      Por Equipe Editorial &nbsp;|&nbsp; 29 de maio de 2025
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    © 2025 Jornal Mundial IS. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

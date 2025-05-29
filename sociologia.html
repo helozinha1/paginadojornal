@@ -18,6 +18,7 @@
             margin-top: 40px;
             margin-bottom: 30px;
             text-align: center;
+            font-family: 'Merriweather', serif;
         }
 
         /* Estilo para o grid de notícias */
@@ -38,6 +39,8 @@
             flex-direction: column;
             justify-content: space-between;
             transition: transform 0.2s ease-in-out;
+            text-decoration: none; /* Remove sublinhado do link */
+            color: inherit; /* Mantém a cor do texto padrão */
         }
 
         .news-card:hover {
@@ -68,6 +71,7 @@
             padding: 0 15px;
             margin-top: 10px;
             margin-bottom: 5px;
+            font-family: 'Merriweather', serif;
         }
 
         .news-card .article-meta {
@@ -94,15 +98,38 @@
             text-decoration: none;
             margin: 0 15px 15px;
             transition: background-color 0.3s ease;
+            align-self: flex-start; /* Garante que o botão fique alinhado à esquerda dentro do card */
         }
 
         .news-card .read-more-btn:hover {
             background-color: #c0392b; /* Tom mais escuro no hover */
         }
         
-        /* Seções de Header e Footer e Container devem vir do style.css principal */
-        /* Removi elas do <style> inline para reforçar que devem estar no style.css externo */
-        /* Garanta que seu 'style.css' tenha os estilos para .main-header, .logo, .main-nav, .main-footer, .container etc. */
+        /* Responsividade para a página de categorias */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2rem;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .news-grid-container {
+                gap: 20px;
+                padding: 0 15px; /* Adiciona padding para evitar que os cards toquem as bordas */
+            }
+            .news-card {
+                min-width: unset; /* Remove min-width para melhor adaptação */
+                width: 100%; /* Ocupa 100% da largura disponível em telas pequenas */
+            }
+            .news-card img {
+                height: 160px;
+            }
+            .news-card h3 {
+                font-size: 1.2rem;
+            }
+            .news-card p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,52 +155,36 @@
         <h2 class="page-title">Sociologia em Foco: Notícias e Análises Sociais</h2>
 
         <section class="news-grid-container">
-            <article class="news-card">
-                <img src="img/classes.png  " alt="Pessoas de diferentes origens e estratos sociais em uma metrópole, simbolizando a diversidade e as relações de classe.">
+            <a href="racial.html" class="news-card">
+                <img src="img/1racial.png" alt="Imagem que representa diversidade e inclusão, com pessoas de diferentes etnias">
+                <span class="category-tag">Sociologia</span>
+                <h3>Desafios e Impactos da Desigualdade Racial na Sociedade</h3>
+                <p class="article-meta">Por: Equipe Editorial | 29 de Maio de 2025</p>
+                <p>A desigualdade racial é um problema social persistente que afeta a distribuição de oportunidades, o acesso a recursos e a qualidade de vida de indivíduos e grupos, perpetuando disparidades históricas.</p>
+                <span class="read-more-btn">Ler Mais</span>
+            </a>
+
+            <a href="genero.html" class="news-card">
+                <img src="img/genero.png" alt="Imagem que representa igualdade de gênero e empoderamento feminino">
+                <span class="category-tag">Sociologia</span>
+                <h3>Desigualdade de Gênero: Barreiras e Impactos na Sociedade Contemporânea</h3>
+                <p class="article-meta">Por: Equipe Editorial | 29 de Maio de 2025</p>
+                <p>A desigualdade de gênero é uma questão central na sociologia, referindo-se às disparidades de poder, oportunidades e tratamento entre homens e mulheres em diversas esferas da vida social.</p>
+                <span class="read-more-btn">Ler Mais</span>
+            </a>
+
+            <a href="classes.html" class="news-card">
+                <img src="img/classes.png" alt="Pessoas de diferentes origens e estratos sociais em uma metrópole, simbolizando a diversidade e as relações de classe.">
                 <span class="category-tag">Estrutura Social</span>
                 <h3>Relações de Classes: Conflito, Mobilidade e Estrutura Social</h3>
-                <p class="article-meta">28/05/2025 | Análise Sociológica</p>
+                <p class="article-meta">29/05/2025 | Análise Sociológica</p>
                 <p>Uma análise aprofundada sobre as classes sociais, suas interações, desigualdades e a dinâmica da estratificação, com base em perspectivas de Marx e Weber.</p>
-                <a href="noticia-classes-sociais.html" class="read-more-btn">Leia Mais</a>
-            </article>
+                <span class="read-more-btn">Leia Mais</span>
+            </a>
 
-            <article class="news-card">
-                <img src="./imagens/noticia-desigualdade.jpg" alt="Pessoas em diferentes níveis sociais, simbolizando desigualdade.">
-                <span class="category-tag">Desigualdade</span>
-                <h3>Impacto da IA no Mercado de Trabalho Global</h3>
-                <p class="article-meta">28/05/2025 | Fonte: Análise Social</p>
-                <p>A inteligência artificial transforma rapidamente o mercado de trabalho, gerando debates sobre o aumento da desigualdade e a necessidade de requalificação profissional.</p>
-                <a href="noticia1-sociologia.html" class="read-more-btn">Leia Mais</a>
-            </article>
-
-            <article class="news-card">
-                <img src="./imagens/noticia-movimentos-sociais.jpg" alt="Manifestação em rua, com placas genéricas.">
-                <span class="category-tag">Movimentos Sociais</span>
-                <h3>Jovens Lideram Protestos por Ação Climática</h3>
-                <p class="article-meta">20/05/2025 | Fonte: Observatório Social</p>
-                <p>A crescente mobilização de jovens ativistas ao redor do mundo demonstra a força dos novos movimentos sociais na busca por justiça ambiental e social.</p>
-                <a href="noticia2-sociologia.html" class="read-more-btn">Leia Mais</a>
-            </article>
-
-            <article class="news-card">
-                <img src="./imagens/noticia-cultura-digital.jpg" alt="Pessoas interagindo com smartphones e realidade virtual, simbolizando a cultura digital.">
-                <span class="category-tag">Cultura Digital</span>
-                <h3>Desafios da Cultura Digital na Formação de Identidades</h3>
-                <p class="article-meta">15/05/2025 | Fonte: Tendências Sociais</p>
-                <p>A influência das redes sociais e do ambiente digital na construção da identidade e nas relações sociais é um campo vasto de estudo sociológico.</p>
-                <a href="noticia3-sociologia.html" class="read-more-btn">Leia Mais</a>
-            </article>
-
-            <article class="news-card">
-                <img src="./imagens/noticia-familia-contemporanea.jpg" alt="Família diversa, simbolizando as novas configurações familiares.">
-                <span class="category-tag">Instituições Sociais</span>
-                <h3>Novas Configurações Familiares e Seus Desafios</h3>
-                <p class="article-meta">10/05/2025 | Fonte: Pesquisa Social</p>
-                <p>As transformações na estrutura familiar refletem mudanças profundas na sociedade, questionando modelos tradicionais e abrindo espaço para novas discussões.</p>
-                <a href="noticia4-sociologia.html" class="read-more-btn">Leia Mais</a>
-            </article>
-
-            </section>
+           
+  
+        </section>
     </main>
 
     <footer class="main-footer">

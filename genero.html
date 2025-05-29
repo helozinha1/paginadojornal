@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícia: Desigualdade de Gênero: Barreiras e Impactos na Sociedade Contemporânea - Jornal Mundial</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos copiados do seu modelo "Planejamento Urbano" e "Desigualdade Racial" */
+    body {
+      background: #f4f4f4;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      padding: 32px 28px;
+      flex-grow: 1;
+    }
+    .titulo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 10px;
+      font-family: 'Merriweather', serif;
+    }
+    .subtitulo {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 24px;
+    }
+    .imagem-noticia {
+      width: 100%;
+      max-height: 340px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .texto {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .texto h2 {
+      font-size: 1.8rem;
+      color: #0056b3;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #dc3545;
+      padding-bottom: 5px;
+      font-family: 'Merriweather', serif;
+    }
+    .texto h3 {
+      font-size: 1.4rem;
+      color: #222;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-family: 'Merriweather', serif;
+    }
+    .texto ul {
+      list-style-type: disc;
+      margin-left: 30px;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    .texto li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .autor {
+      margin-top: 32px;
+      font-size: 0.95rem;
+      color: #888;
+      text-align: right;
+    }
+    .cabecalho-jornal {
+      background: #004080;
+      color: #fff;
+      padding: 28px 0 16px 0;
+      border-radius: 0;
+      text-align: center;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      letter-spacing: 2px;
+    }
+    .cabecalho-jornal .nome-jornal {
+      font-size: 2.7rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .cabecalho-jornal .edicao {
+      font-size: 1.1rem;
+      margin-top: 6px;
+      letter-spacing: 1px;
+    }
+    .resumo-box {
+      background-color: #e0f2f7;
+      border-left: 5px solid #007bff;
+      padding: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .resumo-box p {
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.6;
+      font-style: italic;
+      margin: 0;
+    }
+    .main-footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 50px;
+      font-size: 1rem;
+      width: 100%;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.10);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .cabecalho-jornal .nome-jornal {
+        font-size: 2.2rem;
+      }
+      .cabecalho-jornal .edicao {
+        font-size: 0.9rem;
+      }
+      .container {
+        margin: 20px auto;
+        padding: 20px 20px;
+      }
+      .titulo {
+        font-size: 2rem;
+      }
+      .subtitulo {
+        font-size: 1rem;
+      }
+      .texto {
+        font-size: 0.95rem;
+      }
+      .texto h2 {
+        font-size: 1.5rem;
+      }
+      .texto h3 {
+        font-size: 1.2rem;
+      }
+      .resumo-box {
+        padding: 15px;
+      }
+      .resumo-box p {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cabecalho-jornal .nome-jornal {
+        font-size: 1.8rem;
+      }
+      .cabecalho-jornal .edicao {
+        font-size: 0.8rem;
+      }
+      .titulo {
+        font-size: 1.8rem;
+      }
+      .subtitulo {
+        font-size: 0.9rem;
+      }
+      .texto h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cabecalho-jornal">
+    <span class="nome-jornal">Jornal Mundial</span>
+    <div class="edicao">Fundado em 1951 &nbsp;|&nbsp; Edição de 29 de Maio de 2025</div>
+  </div>
+
+  <div class="container">
+    <div class="titulo">Desigualdade de Gênero: Barreiras e Impactos na Sociedade Contemporânea</div>
+    <div class="subtitulo">Análise sociológica das disparidades entre homens e mulheres no mercado de trabalho, na política e na vida social</div>
+    <img src="img/genero.png" alt="Imagem representando igualdade de gênero" class="imagem-noticia">
+    <div class="texto">
+      A desigualdade de gênero é uma questão central na sociologia, referindo-se às disparidades de poder, oportunidades e tratamento entre homens e mulheres em diversas esferas da vida social. Essa desigualdade não é apenas uma questão de direitos humanos, mas também um fator que limita o desenvolvimento social e econômico.
+      <br><br>
+
+      <h2>Mercado de Trabalho e Remuneração</h2>
+      Uma das manifestações mais evidentes da desigualdade de gênero é a disparidade salarial. Em muitas sociedades, mulheres recebem salários inferiores aos dos homens para realizar o mesmo trabalho ou trabalhos de valor semelhante. Além disso, observa-se a segregação ocupacional, onde certas profissões são predominantemente femininas e outras masculinas, frequentemente com as profissões femininas sendo menos valorizadas e remuneradas. A presença feminina em cargos de liderança e em setores de alta tecnologia ainda é significativamente menor.
+      <br><br>
+
+      <h2>Participação Política e Tomada de Decisão</h2>
+      Apesar dos avanços, a participação das mulheres na política e em cargos de tomada de decisão ainda é desproporcionalmente baixa em muitos países. Essa sub-representação limita a capacidade de as mulheres influenciarem políticas públicas que afetam suas vidas e a sociedade como um todo. Barreiras culturais, estereótipos de gênero e a falta de apoio estrutural contribuem para essa desigualdade.
+      <br><br>
+
+      <h2>Violência de Gênero</h2>
+      A violência contra mulheres e meninas é uma das expressões mais graves da desigualdade de gênero. Ela abrange diversas formas, desde violência doméstica e assédio sexual até tráfico de pessoas e feminicídio. Essa violência não apenas causa danos físicos e psicológicos às vítimas, mas também perpetua um clima de medo e desigualdade.
+      <br><br>
+
+      <h2>Divisão do Trabalho Doméstico e de Cuidados</h2>
+      Tradicionalmente, as mulheres têm arcado com a maior parte do trabalho doméstico e de cuidados com filhos e idosos. Embora essa divisão esteja evoluindo, em muitos lares e sociedades, as mulheres ainda dedicam mais tempo a essas atividades não remuneradas, o que pode limitar suas oportunidades de educação, emprego e participação na vida pública.
+      <br><br>
+
+      <div class="resumo-box">
+        <p>A desigualdade de gênero persiste como um desafio sociológico fundamental, manifestando-se em disparidades salariais, sub-representação política, violência de gênero e uma divisão desigual do trabalho doméstico. Superar essas barreiras requer mudanças culturais, políticas públicas eficazes e o engajamento de toda a sociedade para promover a igualdade de oportunidades e o respeito aos direitos de todas as pessoas, independentemente do gênero.</p>
+      </div>
+
+      <h2>Estratégias para Promover a Igualdade de Gênero</h2>
+      Diversas estratégias são essenciais para avançar na igualdade de gênero. Políticas de ação afirmativa, como cotas para mulheres na política e em conselhos de empresas, podem ajudar a corrigir desequilíbrios históricos. Investimentos em educação e programas de conscientização sobre estereótipos de gênero são cruciais desde a infância. Leis que garantam a igualdade salarial para trabalho igual e que combatam a violência de gênero são fundamentais. Além disso, promover a divisão equitativa do trabalho doméstico e de cuidados é essencial para que as mulheres possam participar plenamente em todas as esferas da vida.
+    </div>
+
+    <div class="autor">
+      Por Equipe Editorial &nbsp;|&nbsp; 29 de maio de 2025
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    © 2025 Jornal Mundial IS. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

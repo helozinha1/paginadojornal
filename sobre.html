@@ -6,128 +6,317 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Estilos específicos para a página Sobre Nós */
+        /* Estilos específicos para a página Sobre Nós - Novo Design */
+        body {
+            background-color: #f8f9fa; /* Um fundo mais claro e suave */
+        }
+
         .page-title {
-            font-size: 2.8rem;
-            font-weight: bold;
-            color: #222;
-            margin-top: 40px;
-            margin-bottom: 30px;
+            font-size: 3.2rem; /* Título principal ainda maior */
+            font-weight: 700;
+            color: #212529; /* Cor de texto mais escura e padrão */
+            margin-top: 60px;
+            margin-bottom: 50px;
             text-align: center;
+            font-family: 'Merriweather', serif;
+            letter-spacing: -0.5px; /* Levemente mais apertado */
         }
 
         .about-section {
-            padding: 30px 0;
+            padding: 50px 0; /* Mais padding */
+            max-width: 1000px; /* Largura máxima maior para o conteúdo */
+            margin: 0 auto 80px auto; /* Centraliza e adiciona mais espaço abaixo */
+            background-color: #ffffff;
+            border-radius: 15px; /* Cantos bem arredondados */
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); /* Sombra mais profunda */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about-content {
+            text-align: center;
+            padding: 0 40px; /* Mais padding interno */
+        }
+
+        .about-content h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.8rem; /* Títulos de seção maiores */
+            color: #0056b3; /* Um azul mais vibrante */
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block; /* Para centralizar o pseudo-elemento */
+        }
+
+        .about-content h2::after {
+            content: '';
+            display: block;
+            width: 80px; /* Linha decorativa abaixo do título */
+            height: 4px;
+            background-color: #dc3545; /* Vermelho/laranja de destaque */
+            margin: 10px auto 0; /* Centraliza a linha */
+            border-radius: 2px;
+        }
+
+        .about-content p {
+            font-size: 1.25rem; /* Texto maior para a missão/introdução */
+            line-height: 1.9;
+            max-width: 800px;
+            margin: 0 auto 50px auto; /* Espaço após o parágrafo */
+            color: #495057; /* Cor de texto mais suave */
+            font-weight: 400;
+        }
+
+        /* Seção da Equipe */
+        .team-section {
+            width: 100%;
+            padding: 40px; /* Padding interno para a seção da equipe */
+            background-color: #f0f2f5; /* Fundo suave para a seção da equipe */
+            border-radius: 0 0 15px 15px; /* Arredonda só os cantos de baixo */
+            box-shadow: inset 0 8px 15px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
             text-align: center;
         }
 
-        .about-section h2 {
+        .team-section h2 {
             font-family: 'Merriweather', serif;
-            font-size: 2.2rem;
-            color: #004080;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            color: #0056b3;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
         }
 
-        .about-section p {
-            font-size: 1.1rem;
+        .team-section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #dc3545;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .team-section > p { /* O parágrafo logo abaixo do h2 da equipe */
+            font-size: 1.15rem;
             line-height: 1.8;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto 50px auto;
-            color: #555;
+            color: #5a6268;
         }
 
         .team-grid {
             display: grid;
-            /* Ajuste para tentar manter mais membros na linha. 
-               O 'minmax' com um valor menor ajuda em telas intermediárias. */
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); 
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cards maiores e mais flexíveis */
+            gap: 40px; /* Mais espaçamento entre os cards */
             margin-top: 40px;
-            margin-bottom: 50px; /* Espaço antes do rodapé */
-            justify-content: center; /* Centraliza os itens se houver espaço extra */
-            align-items: stretch; /* Garante que todos os cards tenham a mesma altura */
+            padding: 0 20px; /* Padding para a grade */
+            justify-content: center; /* Centraliza a grade */
         }
 
         .team-member-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra mais destacada */
+            padding: 30px; /* Mais padding interno */
             text-align: center;
-            display: flex; /* Para flexbox interno para alinhamento de conteúdo */
+            display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Garante que o conteúdo se espalhe */
-            transition: transform 0.2s ease-in-out;
+            align-items: center; /* Centraliza o conteúdo verticalmente no card */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef; /* Borda suave */
         }
 
         .team-member-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-12px) scale(1.02); /* Efeito de "levantar" e leve zoom */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Sombra maior no hover */
         }
 
         .team-member-card img {
-            width: 150px;
-            height: 150px;
+            width: 180px; /* Imagem ainda maior */
+            height: 180px;
             border-radius: 50%; /* Imagens redondas */
             object-fit: cover;
-            margin: 0 auto 15px auto; /* Centraliza a imagem */
-            border: 4px solid #e74c3c; /* Borda colorida para destaque */
+            margin-bottom: 25px; /* Mais espaço abaixo da imagem */
+            border: 6px solid #dc3545; /* Borda colorida mais grossa */
+            box-shadow: 0 0 0 6px rgba(220, 53, 69, 0.2); /* Sombra sutil atrás da borda */
         }
 
         .team-member-card h3 {
-            font-size: 1.4rem;
-            color: #333;
-            margin-bottom: 5px;
+            font-size: 1.8rem; /* Nome maior */
+            color: #343a40; /* Cor de texto mais escura */
+            margin-bottom: 8px;
+            font-family: 'Merriweather', serif;
         }
 
         .team-member-card .role {
-            font-size: 0.95rem;
-            color: #004080;
+            font-size: 1.15rem; /* Um pouco maior */
+            color: #0056b3; /* Cor azul vibrante para a função */
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .team-member-card p {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 10px;
+            font-size: 1rem; /* Texto descritivo padrão */
+            color: #6c757d; /* Cor de texto mais suave */
+            line-height: 1.7;
+            margin-bottom: 0; /* Remove a margem inferior para o último parágrafo */
             flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
         }
 
         .placeholder-card {
-            background: #f0f0f0; /* Cor de fundo para o quadrado vazio */
-            border: 2px dashed #ccc; /* Borda tracejada para indicar que é um espaço vago */
-            color: #999;
+            background: #e9ecef; /* Fundo cinza claro para o placeholder */
+            border: 3px dashed #adb5bd; /* Borda tracejada mais visível */
+            color: #6c757d;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.4rem; /* Texto maior */
             font-weight: bold;
             text-align: center;
-            min-height: 250px; /* Garante que tenha um tamanho similar aos outros cards */
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra mais suave */
+            min-height: 380px; /* Garante que tenha uma altura similar aos outros cards */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .placeholder-card:hover {
+            transform: scale(1.03); /* Leve zoom no hover */
+            border-color: #0056b3; /* Borda azul no hover */
+            color: #0056b3; /* Texto azul no hover */
         }
 
         /* Responsividade */
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             .page-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
+                margin-top: 40px;
+                margin-bottom: 30px;
             }
 
-            .about-section h2 {
-                font-size: 1.8rem;
+            .about-section {
+                padding: 30px 0;
+                margin: 0 20px 60px 20px;
             }
 
-            .about-section p {
+            .about-content h2,
+            .team-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .about-content p {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+
+            .team-section {
+                padding: 30px;
+            }
+
+            .team-section > p {
                 font-size: 1rem;
                 padding: 0 15px;
             }
 
             .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+                padding: 0 15px;
+            }
+
+            .team-member-card {
+                padding: 25px;
+            }
+
+            .team-member-card img {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+
+            .team-member-card h3 {
+                font-size: 1.6rem;
+            }
+
+            .team-member-card .role {
+                font-size: 1.05rem;
+                margin-bottom: 15px;
+            }
+
+            .team-member-card p {
+                font-size: 0.95rem;
+            }
+
+            .placeholder-card {
+                min-height: 320px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+
+            .about-section {
+                padding: 25px 0;
+                margin: 0 15px 40px 15px;
+            }
+
+            .about-content h2,
+            .team-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+                padding: 0 15px;
+                margin-bottom: 25px;
+            }
+
+            .team-section {
+                padding: 25px;
+            }
+
+            .team-section > p {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+
+            .team-grid {
                 grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
                 padding: 0 15px;
+                gap: 25px;
+            }
+
+            .team-member-card {
+                padding: 20px;
+            }
+
+            .team-member-card img {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 15px;
+            }
+
+            .team-member-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .team-member-card .role {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+            }
+
+            .team-member-card p {
+                font-size: 0.9rem;
+            }
+
+            .placeholder-card {
+                min-height: 280px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -151,51 +340,55 @@
     </header>
 
     <main class="container">
-        <h2 class="page-title">Sobre o Jornal Mundial IS</h2>
+        <h2 class="page-title">Conheça o Jornal Mundial IS</h2>
 
         <section class="about-section">
-            <h2>Nossa Missão</h2>
-            <p>
-                O Jornal Mundial IS é mais do que um projeto; é a nossa plataforma para transformar os trabalhos escolares do ensino médio em experiências práticas. Aqui, aplicamos ativamente o conhecimento adquirido no curso técnico, complementamos com o que já sabemos e estudamos por fora. Nosso objetivo é conectar o conteúdo acadêmico com os desafios do cotidiano, promovendo o pensamento crítico e a cidadania através da informação de qualidade.
-            </p>
+            <div class="about-content">
+                <h2>Nossa Missão</h2>
+                <p>
+                    O Jornal Mundial IS nasceu da paixão por transformar o conhecimento escolar em algo tangível e impactante. Somos um projeto do ensino médio que vai além da sala de aula, aplicando conceitos de Geoprocessamento, Sociologia, Meio Ambiente e muito mais. Nosso propósito é fomentar o pensamento crítico e a cidadania, conectando o que aprendemos com os desafios e as belezas do mundo real. Através de uma abordagem prática e inovadora, buscamos criar um espaço onde a informação de qualidade inspira a ação e a compreensão do nosso planeta e de suas complexas sociedades.
+                </p>
+            </div>
 
-            <h2>Nossa Equipe</h2>
-            <p>
-                Conheça os profissionais apaixonados por educação e jornalismo que fazem o Jornal Mundial IS acontecer. Trabalhamos juntos para trazer conteúdo de alta qualidade, desvendando as nuances do nosso planeta e das sociedades que o habitam.
-            </p>
+            <div class="team-section">
+                <h2>Conheça Nossa Equipe</h2>
+                <p>
+                    Por trás de cada artigo, pesquisa e linha de código, há uma equipe dedicada de jovens profissionais e estudantes. Com talentos diversos e um objetivo comum, trabalhamos em sintonia para desvendar as nuances do mundo e entregar conteúdo que faz a diferença.
+                </p>
 
-            <div class="team-grid">
-                <article class="team-member-card">
-                    <img src="img/helloysa.jpeg" alt="Foto de Helloysa">
-                    <h3>Helloysa</h3>
-                    <p class="role">Design e Desenvolvimento Frontend</p>
-                    <p>Com sua visão criativa e habilidades de codificação, Helloysa une estética e funcionalidade, garantindo uma experiência visual e técnica de alta qualidade para o nosso jornal.</p>
-                </article>
+                <div class="team-grid">
+                    <article class="team-member-card">
+                        <img src="img/helloysa.jpeg" alt="Foto de Helloysa">
+                        <h3>Helloysa</h3>
+                        <p class="role">Design & Desenvolvimento Frontend</p>
+                        <p>Com sua visão artística e expertise em código, Helloysa esculpe a interface do jornal, garantindo uma experiência visual impecável e intuitiva para nossos leitores.</p>
+                    </article>
 
-                <article class="team-member-card">
-                    <img src="img/yago.png" alt="Foto de Yago">
-                    <h3>Yago</h3>
-                    <p class="role">Desenvolvedor Frontend</p>
-                    <p>Yago transforma nossas ideias em realidade, garantindo que o site seja funcional, rápido e responsivo.</p>
-                </article>
+                    <article class="team-member-card">
+                        <img src="img/thiago.png" alt="Foto de Thiago">
+                        <h3>Thiago</h3>
+                        <p class="role">Pesquisador & Editor de Conteúdo</p>
+                        <p>Thiago mergulha fundo nas informações, apurando dados, organizando pesquisas e garantindo que cada artigo seja preciso e relevante para nossa audiência.</p>
+                    </article>
 
-                <article class="team-member-card">
-                    <img src="./imagens/rodrigo.jpg" alt="Foto de Rodrigo">
-                    <h3>Rodrigo</h3>
-                    <p class="role">Desenvolvedor Frontend</p>
-                    <p>Com foco na experiência do usuário, Rodrigo trabalha para que a navegação no Jornal Mundial IS seja sempre intuitiva e agradável.</p>
-                </article>
+                    <article class="team-member-card">
+                        <img src="img/yago.png" alt="Foto de Yago">
+                        <h3>Yago</h3>
+                        <p class="role">Desenvolvedor Frontend</p>
+                        <p>Yago é o arquiteto por trás da funcionalidade do site, transformando ideias em código e garantindo que tudo opere de forma fluida e responsiva para todos os dispositivos.</p>
+                    </article>
 
-                <article class="team-member-card">
-                    <img src="img/thiago.png" alt="Foto de Thiago">
-                    <h3>Thiago</h3>
-                    <p class="role">Pesquisador de Conteúdo</p>
-                    <p>Thiago é responsável por apurar e organizar os dados e informações que fundamentam nossas análises e notícias.</p>
-                </article>
+                    <article class="team-member-card">
+                        <img src="./imagens/rodrigo.jpg" alt="Foto de Rodrigo">
+                        <h3>Rodrigo</h3>
+                        <p class="role">Desenvolvedor Frontend</p>
+                        <p>Com um olhar atento aos detalhes e à usabilidade, Rodrigo aprimora a navegação e interatividade, tornando a leitura do Jornal Mundial IS ainda mais prazerosa.</p>
+                    </article>
 
-                <article class="placeholder-card">
-                    Novo Membro em Breve!
-                </article>
+                    <article class="placeholder-card">
+                        Novo Membro em Breve!
+                    </article>
+                </div>
             </div>
         </section>
     </main>
