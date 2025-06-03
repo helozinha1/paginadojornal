@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>E
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Mundial IS - Educação Física </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Os estilos gerais já devem estar em style.css.
+           Aqui, focamos em pequenos ajustes ou sobreposições se necessário. */
+
+        /* Ajustes de estilo para o título da página */
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #222;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Estilo para o grid de notícias */
+        .news-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Estilo individual do card de notícia */
+        .news-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease-in-out;
+            text-decoration: none; /* Remove sublinhado do link */
+            color: inherit; /* Mantém a cor do texto padrão */
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 180px; /* Altura fixa para as imagens das notícias */
+            object-fit: cover;
+            display: block;
+        }
+
+        .news-card .category-tag {
+            background-color: #e74c3c; /* Cor para categoria, pode ser alterada para vermelho */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            margin: 15px 15px 0;
+            display: inline-block;
+        }
+
+        .news-card h3 {
+            font-size: 1.3rem;
+            color: #333;
+            padding: 0 15px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .news-card .article-meta {
+            font-size: 0.85rem;
+            color: #777;
+            padding: 0 15px;
+            margin-bottom: 10px;
+        }
+
+        .news-card p {
+            font-size: 0.95rem;
+            color: #555;
+            padding: 0 15px 15px;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .news-card .read-more-btn {
+            display: inline-block;
+            background-color: #e74c3c; /* Cor do botão (vermelho) */
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 15px 15px;
+            transition: background-color 0.3s ease;
+            align-self: flex-start; /* Garante que o botão fique alinhado à esquerda dentro do card */
+        }
+
+        .news-card .read-more-btn:hover {
+            background-color: #c0392b; /* Tom mais escuro no hover */
+        }
+        
+        /* Responsividade para a página de categorias */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2rem;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .news-grid-container {
+                gap: 20px;
+                padding: 0 15px; /* Adiciona padding para evitar que os cards toquem as bordas */
+            }
+            .news-card {
+                min-width: unset; /* Remove min-width para melhor adaptação */
+                width: 100%; /* Ocupa 100% da largura disponível em telas pequenas */
+            }
+            .news-card img {
+                height: 160px;
+            }
+            .news-card h3 {
+                font-size: 1.2rem;
+            }
+            .news-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Jornal Mundial IS" class="logo-img">
+                <h1>Jornal Mundial IS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="geografia.html">Geografia</a></li>
+                    <li><a href="sociologia.html">Sociologia</a></li>
+                    <li><a href="química.html">Química</a></li>
+                    <li><a href="Educação Física.html">Educação Física</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Central Four Square: Tudo sobre o Jogo</h2>
+
+        <section class="news-grid-container">
+            <a href="racial.html" class="news-card">
+                <img src="img/1racial.png" alt="Imagem que representa diversidade e inclusão, com pessoas de diferentes etnias">
+                <span class="category-tag">Sociologia</span>
+                <h3>Desafios e Impactos da Desigualdade Racial na Sociedade</h3>
+                <p class="article-meta">Por: Equipe Editorial | 29 de Maio de 2025</p>
+                <p>A desigualdade racial é um problema social persistente que afeta a distribuição de oportunidades, o acesso a recursos e a qualidade de vida de indivíduos e grupos, perpetuando disparidades históricas.</p>
+                <span class="read-more-btn">Ler Mais</span>
+            </a>
+
+            <a href="genero.html" class="news-card">
+                <img src="img/genero.png" alt="Imagem que representa igualdade de gênero e empoderamento feminino">
+                <span class="category-tag">Sociologia</span>
+                <h3>Desigualdade de Gênero: Barreiras e Impactos na Sociedade Contemporânea</h3>
+                <p class="article-meta">Por: Equipe Editorial | 29 de Maio de 2025</p>
+                <p>A desigualdade de gênero é uma questão central na sociologia, referindo-se às disparidades de poder, oportunidades e tratamento entre homens e mulheres em diversas esferas da vida social.</p>
+                <span class="read-more-btn">Ler Mais</span>
+            </a>
+
+            <a href="classes.html" class="news-card">
+                <img src="img/classes.png" alt="Pessoas de diferentes origens e estratos sociais em uma metrópole, simbolizando a diversidade e as relações de classe.">
+                <span class="category-tag">Estrutura Social</span>
+                <h3>Relações de Classes: Conflito, Mobilidade e Estrutura Social</h3>
+                <p class="article-meta">29/05/2025 | Análise Sociológica</p>
+                <p>Uma análise aprofundada sobre as classes sociais, suas interações, desigualdades e a dinâmica da estratificação, com base em perspectivas de Marx e Weber.</p>
+                <span class="read-more-btn">Leia Mais</span>
+            </a>
+
+           
+  
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Jornal Mundial IS. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Nós</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
